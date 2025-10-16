@@ -922,6 +922,111 @@ footer {
   outline-offset: -1rem;
   box-shadow: 10px 10px 10px black;
 }
+/* ==============================
+   ABOUT US SECTION
+============================== */
+.about-section {
+  padding: 80px 10%;
+  background: #f8f8f5; /* soft off-white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-image img {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 1px black;
+  outline: 4px solid var(--lemon-light);
+  outline-offset: -3rem;
+  /* animation: floatImage 5s ease-in-out infinite alternate; */
+}
+
+.about-text {
+  flex: 1;
+  color: #222;
+  max-width: 550px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-text h2 span {
+  color: #76ff03;
+}
+
+.about-text p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #c6ff00, #76ff03);
+  color: #111;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #d4ff3c, #b2ff59);
+}
+
+/* 🌿 Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 90%;
+  }
+}
+
 
 
 

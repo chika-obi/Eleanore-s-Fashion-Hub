@@ -242,6 +242,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// 🌿 Reveal About Us on scroll
+window.addEventListener("scroll", () => {
+  const aboutSection = document.querySelector(".about-section");
+  const rect = aboutSection.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight - 100) {
+    aboutSection.style.opacity = "1";
+    aboutSection.style.transform = "translateY(0)";
+    aboutSection.style.transition = "all 1s ease";
+  }
+});
+
+
 
 
 
