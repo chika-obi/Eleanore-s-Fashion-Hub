@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eleanore's Fashion Hub</title>
+
+  <!-- ✅ Font Awesome CDN (Latest, works 100%) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEw4wj4AdpH0Sn6TfPZ7pWuecz3xz8QGpT9eA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+
+  <!-- Canvas Sparkle Background -->
+  <canvas id="sparkleCanvas"></canvas>
+
+  <!-- Floating Circles Background -->
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+
+ <!-- Header -->
+ <header>
+  <!-- <div>
+    <img src="./image/logo.jpeg" alt="" class = "logo_two">
+  </div> -->
+  <div class="logo">Eleanore<span>'s</span> Fashion Hub</div>
+
+  <!-- Mobile Menu Icon -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navbar">
+    <a href="#">Home</a>
+    <a href="#collection">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ✨ FASHION SLIDER SECTION -->
+<section class="fashion-slider">
+  <div class="slider-container">
+    <!-- <img src="./images/fashion5.jpg" class="slide active" alt="Fashion 1"> -->
+    <img src="./images/fashion2.jpg" class="slide" alt="Fashion 2">
+    <img src="./images/fashion3.jpg" class="slide" alt="Fashion 3">
+    <img src="./images/fashion4.jpg" class="slide" alt="Fashion 4">
+    <!-- <img src="./images/fashion5.jpg" class="slide" alt="Fashion 5"> -->
+    <img src="./images/fashion1.jpg" class="slide" alt="Fashion 6">
+  </div>
+
+  <div class="slider-overlay">
+    <h1>Elegance in Motion</h1>
+    <p>Discover fashion that moves with you — bold, confident, timeless.</p>
+    <button class="btn-primary">Shop the Collection</button>
+  </div>
+</section>
+
+  
+
+  <!-- ✨ Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Elegance Meets Energy</h1>
+      <p>
+        Experience the vibrant charm of lemon-green fashion.  
+        Where confidence, class, and comfort meet modern style.
+      </p>
+      <button class="btn-primary">Explore Now</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="./images/fashion5.jpg" alt="Eleanore Fashion Model" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============================= -->
+<!--     FEATURED COLLECTION       -->
+<!-- ============================= -->
+<section class="gallery-section" id="collection">
+  <h2 class="section-title">Our Featured Collection</h2>
+  <p class="section-subtitle">Discover the latest looks from Eleanore’s Fashion Hub</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="./images/fashion1.jpg" alt="Elegant Dress">
+      <div class="overlay">
+        <h3>Elegant Dress</h3>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="./images/fashion2.jpg" alt="Urban Vibe">
+      <div class="overlay">
+        <h3>Urban Vibe</h3>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="./images/logo.jpeg" alt="Chic Comfort">
+      <div class="overlay">
+        <h3>Chic Comfort</h3>
+      </div>
+     </div>
+     <div class="gallery-item">
+      <img src="./images/fashion3.jpg" alt="Chic Comfort">
+      <div class="overlay">
+        <h3>Chic Comfort</h3>
+   </div>
+      </div>
+    <div class="gallery-item">
+      <img src="./images/fashion4.jpg" alt="Modern Elegance">
+      <div class="overlay">
+        <h3>Modern Elegance</h3>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="./images/fashion5.jpg" alt="Modern Elegance">
+      <div class="overlay">
+        <h3>Modern Elegance</h3>
+      </div>
+    </div>
+  </div>
+   <!-- ✨ Lookbook Button -->
+    <button class="lookbook-btn">View Full Lookbook</button>
+</section>
+
+
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>Eco-Friendly Fabrics</h3>
+      <p>Crafted with sustainable materials to respect our planet.</p>
+    </div>
+    <div class="feature">
+      <h3>Seasonal Designs</h3>
+      <p>Stay on trend with limited collections every season.</p>
+    </div>
+    <div class="feature">
+      <h3>Worldwide Shipping</h3>
+      <p>Enjoy fast and reliable global delivery on all orders.</p>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+<!--      CONTACT SECTION          -->
+<!-- ============================= -->
+<section class="contact-section" id="contact">
+  <h1>Get in Touch</h1>
+  <p>We’d love to hear from you! Fill out the form below or reach us directly.</p>
+
+  <div class="contact-container">
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Contact Details</h3>
+      <p><strong>Email:</strong> support@eleanorefashion.com</p>
+      <p><strong>Phone:</strong> +234 800 000 0000</p>
+      <p><strong>Whatsapp:</strong> +234 800 000 0000</p>
+      <p><strong>Address:</strong> 45 Elegance Avenue</p>
+       <p>Port Harcourt</p>
+        <p>Nigeria</p>
+    </div>
+  </div>
+</section>
+
+
+ <!-- ============================= -->
+<!--          FOOTER               -->
+<!-- ============================= -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h2>Eleanore's <span>Fashion Hub</span></h2>
+      <p>Elegance in every detail, confidence in every step.</p>
+    </div>
+
+    <div class="footer-socials">
+  <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+  <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+  
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Eleanore's Fashion Hub. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- ✨ LOOKBOOK MODAL GALLERY -->
+<div id="lookbookModal" class="lookbook-modal">
+  <span class="close-modal">&times;</span>
+
+  <div class="lookbook-content">
+    <button class="nav-btn prev-btn">&#10094;</button>
+
+    <img id="lookbookImage" src="./images/fashion_1.jpg" alt="Lookbook Preview" />
+     <img id="lookbookImage" src="./images/fashion.jpg" alt="Lookbook Preview" />
+     <img id="lookbookImage" src="./images/banner_1.jpg" alt="Lookbook Preview" />
+     <img id="lookbookImage" src="./images/banner_2.jpg" alt="Lookbook Preview" />
+
+    <button class="nav-btn next-btn">&#10095;</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
