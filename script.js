@@ -123,11 +123,14 @@ const nextBtn = document.querySelector(".next-btn");
 
 // Your Lookbook images
 const lookbookImages = [
+   "./images/fashion6.jpg",
   "./images/logo.jpeg",
   "./images/fashion1.jpg",
   "./images/fashion2.jpg",
   "./images/fashion3.jpg",
   "./images/fashion4.jpg",
+   "./images/fashion5.jpg",
+    
 ];
 
 let currentIndex = 0;
@@ -199,6 +202,43 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
+  });
+});
+// 🌿 Advanced Floating + Color-Changing Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const logoImg = document.querySelector(".footer-image img");
+  let angle = 0;
+  let hue = 0;
+
+  function animateLogo() {
+    // Update angles for motion
+    angle += 0.02;
+    hue = (hue + 1) % 360;
+
+    // Gentle up/down + side movement
+    const y = Math.sin(angle) * 10;  // vertical float
+    const x = Math.cos(angle / 2) * 8; // horizontal sway
+    const r = Math.sin(angle / 3) * 8; // rotation
+
+    // Apply transformations
+    logoImg.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+
+    // Animate background color with hue rotation
+    logoImg.style.background = `linear-gradient(135deg, hsl(${hue}, 90%, 60%), hsl(${(hue + 60) % 360}, 90%, 70%))`;
+
+    requestAnimationFrame(animateLogo);
+  }
+
+  animateLogo();
+
+  // Pause and glow on hover
+  logoImg.addEventListener("mouseenter", () => {
+    logoImg.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+    logoImg.style.boxShadow = "0 0 25px rgba(198, 255, 0, 0.8)";
+  });
+
+  logoImg.addEventListener("mouseleave", () => {
+    logoImg.style.boxShadow = "10px 10px 10px black";
   });
 });
 
