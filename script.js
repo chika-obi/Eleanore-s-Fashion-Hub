@@ -183,6 +183,26 @@ function showNextSlide() {
 // Auto-change every 6 seconds
 setInterval(showNextSlide, 6000);
 
+// 🌿 Back to Top Button Functionality
+const backToTop = document.getElementById("backToTop");
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTop.style.display = "block";
+    backToTop.style.animation = "fadeIn 0.5s ease";
+  } else {
+    backToTop.style.display = "none";
+  }
+};
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+
 
 
 
